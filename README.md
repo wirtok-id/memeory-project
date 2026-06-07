@@ -1,3 +1,4 @@
+
 <div align="center">
 
 # 🎭 Memeory
@@ -381,3 +382,7 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 <div align="center">
   Made with ❤️ and memes • 
 </div>
+=======
+# memeory-project
+Platform untuk menemukan, memahami, dan menjelajahi sejarah meme internet dengan bantuan AI.
+ (Initial commit)

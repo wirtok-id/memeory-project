@@ -1,6 +1,8 @@
 
 <div align="center">
 
+### WARN:THIS APP OR THIS WEB IS STILL UNDER DEVELOPMENT
+
 # 🎭 Memeory
 
 ### Relive the Internet's Funniest Memories

@@ -1,0 +1,1 @@
+-- Seed data is added in Phase 3 after the database schema migrations exist.

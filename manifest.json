@@ -1,0 +1,12 @@
+{
+  "name": "Memeory",
+  "short_name": "Memeory",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0F0F0F",
+  "theme_color": "#7C3AED",
+  "description": "Relive the Internet's funniest memories.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": []
+}

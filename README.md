@@ -371,13 +371,13 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## 📬 Contact
 
-- **Website:** [memeory.app](https://memeory.app)
-- **Email:** hello@memeory.app
-- **Twitter/X:** [@memeoryapp](https://twitter.com/memeoryapp)
-- **Discord:** [discord.gg/memeory](https://discord.gg/memeory)
+- **Website:** [memeory web](https://wirtok-id.github.io/memeory-project/)
+- **Email:** wirasaja@proton.me
+- **Twitter/X:** not yet
+- **Discord:** not yet
 
 ---
 
 <div align="center">
-  Made with ❤️ and memes • <a href="https://memeory.app">memeory.app</a>
+  Made with ❤️ and memes • 
 </div>

@@ -12,10 +12,10 @@
 [![Build Status](https://github.com/your-org/memeory/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/memeory/actions)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-**Web** • **Android** • **iOS**  
+**Web • 🚧 Android • 🚧 iOS** 
 🇮🇩 Indonesian • 🌍 English
 
-[Live Demo](https://memeory.app) • [Download Android](https://play.google.com/store) • [Download iOS](https://apps.apple.com) • [Report Bug](https://github.com/your-org/memeory/issues) • [Request Feature](https://github.com/your-org/memeory/issues)
+[![GitHub Pages Demo](https://wirtok-id.github.io/memeory-project/) • 🚧 Android Not Yet • 🚧 iOS Not Yet • Report Bug • Request Feature
 
 </div>
 
@@ -39,28 +39,34 @@ Whether you're a nostalgic internet veteran, a content creator tracking trends, 
 
 ## ✨ Features
 
-### Core Features (v1.0)
+### Feature	Status
 
-| Feature | Description |
-|---|---|
-| 🔍 **Meme Search** | Search by title, tags, year, category, or trending status with real-time results |
-| 🕰️ **Meme Timeline** | Browse what was trending 1, 2, and 3 years ago today |
-| 🔥 **Trending Feed** | Live trending memes from Reddit, TikTok, YouTube Shorts, updated every 6 hours |
-| 🤖 **AI Explanation** | Groq-powered meme explanations: meaning, origin, cultural context, popularity |
-| 🔗 **Similar Memes** | Vector similarity search to find related memes |
-| 📊 **Trend Reports** | Daily AI-generated trend summaries |
-| 🎯 **Viral Prediction** | AI predicts viral potential with a 0–100 score |
-| 🌗 **Dark / Light Mode** | System-adaptive theme with manual override |
-| 🌐 **Bilingual** | Full support for English and Bahasa Indonesia |
-| 🔖 **Bookmarks** | Save favorite memes across all devices |
+🔍 Meme Search	📋 Planned
+🕰️ Meme Timeline	📋 Planned
+🔥 Trending Feed	📋 Planned
+🤖 AI Explanation	📋 Planned
+🔗 Similar Memes	📋 Planned
+📊 Trend Reports	📋 Planned
+🎯 Viral Prediction	📋 Planned
+🌗 Dark / Light Mode	🚧 In Development
+🌐 Bilingual	🚧 In Development
+🔖 Bookmarks	📋 Planned
+👤 Authentication	🚧 In Development
+📺 YouTube Integration	🚧 In Development
+👽 Reddit Integration	📋 Planned
+🎵 TikTok Integration	📋 Planned
+📤 User Uploads	📋 Planned
 
+✅ Supabase Integration
+✅ GitHub Pages Deployment
+✅ Flutter Web Build
 ### Platform Support
 
-| Platform | Status | Minimum Version |
-|---|---|---|
-| Android | ✅ Supported | Android 7.0 (API 24) |
-| iOS | ✅ Supported | iOS 14.0 |
-| Web | ✅ Supported | Chrome 90+, Safari 14+, Firefox 90+ |
+## Platform	Status
+
+Web	✅ Available
+Android	🚧 Not Yet
+iOS	🚧 Not Yet
 
 ---
 
@@ -79,13 +85,17 @@ Whether you're a nostalgic internet veteran, a content creator tracking trends, 
 - **Supabase Realtime** — Live trending updates
 
 ### AI
-- **[Groq API](https://groq.com)** — Ultra-fast LLM inference (LLaMA 3 + Mixtral)
-- **AI Agents** — 7 specialized agents for analysis, explanation, prediction
+
+• Groq API — 📋 Planned
+• AI Agents — 📋 Planned
 
 ### DevOps
-- **GitHub Actions** — CI/CD pipeline
-- **Fastlane** — Automated app store deployment
-- **Sentry** — Error monitoring and crash reporting
+
+• GitHub — ✅
+• GitHub Pages — ✅
+• GitHub Actions — 📋 Planned
+• Fastlane — 📋 Planned
+• Sentry — 📋 Planned
 
 ---
 
@@ -189,20 +199,16 @@ Copy `.env.example` to `.env` and fill in all values:
 ```bash
 cp .env.example .env
 ```
+### API key
+SUPABASE_URL ✅
+SUPABASE_ANON_KEY ✅
 
-| Variable | Description | Required |
-|---|---|---|
-| `SUPABASE_URL` | Your Supabase project URL | ✅ |
-| `SUPABASE_ANON_KEY` | Supabase anonymous/public key | ✅ |
-| `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role key (backend only) | ✅ |
-| `GROQ_API_KEY` | Groq API key for AI features | ✅ |
-| `REDDIT_CLIENT_ID` | Reddit app client ID | ✅ |
-| `REDDIT_CLIENT_SECRET` | Reddit app client secret | ✅ |
-| `YOUTUBE_API_KEY` | YouTube Data API v3 key | ✅ |
-| `GOOGLE_CLIENT_ID` | Google OAuth client ID | ✅ |
-| `SENTRY_DSN` | Sentry project DSN for error monitoring | 🔶 Recommended |
-
-See [.env.example](.env.example) for the complete list.
+YOUTUBE_API_KEY 📋 Planned
+GOOGLE_CLIENT_ID 📋 Planned
+REDDIT_CLIENT_ID 📋 Planned
+REDDIT_CLIENT_SECRET 📋 Planned
+GROQ_API_KEY 📋 Planned
+SENTRY_DSN 📋 Planned
 
 ---
 
@@ -294,31 +300,32 @@ supabase secrets set GROQ_API_KEY=your_key --project-ref YOUR_PROJECT_REF
 ```
 
 ---
+### RoadMap
+Current: v0.1 Foundation
 
-## 🗺️ Roadmap
+✅ Flutter project setup
+✅ GitHub repository
+✅ GitHub Pages deployment
+✅ Supabase integration
+✅ Environment configuration
+✅ Core architecture
 
-See [ROADMAP.md](ROADMAP.md) for detailed roadmap.
+🚧 Authentication
+🚧 Database schema
+🚧 YouTube integration
 
-### Current: v1.0 — Foundation
-- [x] Core architecture & authentication
-- [x] Meme search & filtering
-- [x] Meme Timeline (1, 2, 3 years ago)
-- [x] Trending feed
-- [x] AI explanations & viral prediction
-- [x] EN + ID localization
-
-### Next: v1.1 — Community
-- [ ] Push notifications
-- [ ] Meme reactions
-- [ ] User activity feed
-
-### Future: v2.0 — Platform
-- [ ] Meme Battle (community voting)
-- [ ] Community uploads
-- [ ] Creator profiles
-- [ ] Meme Analytics Dashboard
-- [ ] AI Meme Generator
-
+📋 Meme search
+📋 Meme timeline
+📋 Trending feed
+📋 Reddit integration
+📋 TikTok integration
+📋 AI explanation
+📋 Similar memes
+📋 Viral prediction
+📋 Bookmarks
+📋 Community uploads
+📋 Android release
+📋 iOS release
 ---
 
 ## 🤝 Contributing
@@ -370,17 +377,19 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ---
 
-## 📬 Contact
+### 📬 Contact
 
-- **Website:** [memeory web](https://wirtok-id.github.io/memeory-project/)
-- **Email:** wirasaja@proton.me
-- **Twitter/X:** not yet
-- **Discord:** not yet
+Website: 🚧 Not Yet
+Email: 🚧 Not Yet
+Twitter/X: 🚧 Not Yet
+Discord: 🚧 Not Yet
+
+For bug reports, feature requests, or questions, please open a GitHub Issue.
 
 ---
 
 <div align="center">
-  Made with ❤️ and memes • 
+  Made with ❤️ and memes • 🚧 Official Website Coming Soon 
 </div>
 =======
 # memeory-project

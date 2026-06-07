@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
@@ -150,4 +150,19 @@ app.*.symbols
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+<<<<<<< HEAD
 >>>>>>> 9b8f4d8 (Initial commit)
+=======
+# Environment
+.env
+
+# VS Code
+.vscode/
+
+# Supabase
+.supabase/
+
+# Firebase
+google-services.json
+GoogleService-Info.plist
+ (Update .gitignore)

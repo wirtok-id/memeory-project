@@ -15,9 +15,13 @@ class SupabaseConfig {
     }
 
     await Supabase.initialize(
-  url: config.supabaseUrl,
-  publishableKey: config.supabaseAnonKey,
-  authOptions: const FlutterAuthClientOptions(
-    authFlowType: AuthFlowType.pkce,
-  ),
-);
+      url: config.supabaseUrl,
+      publishableKey: config.supabaseAnonKey,
+      authOptions: const FlutterAuthClientOptions(
+        authFlowType: AuthFlowType.pkce,
+      ),
+    );
+
+    _initialized = true;
+  }
+}

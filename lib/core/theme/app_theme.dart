@@ -53,11 +53,11 @@ class AppTheme {
         centerTitle: false,
       ),
       cardTheme: CardThemeData(
-  elevation: 0,
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(16),
-  ),
-),
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+      ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
           minimumSize: const Size(44, 44),
@@ -76,7 +76,7 @@ class AppTheme {
       ),
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: surface,
-        indicatorColor: AppColors.electricPurple.withOpacity(0.18),
+        indicatorColor: AppColors.electricPurple.withValues(alpha: 0.18),
       ),
     );
   }

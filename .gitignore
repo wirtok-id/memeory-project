@@ -166,3 +166,5 @@ app.*.symbols
 google-services.json
 GoogleService-Info.plist
  (Update .gitignore)
+
+tools/flutter/

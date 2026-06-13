@@ -27,27 +27,27 @@ class AppScaffold extends StatelessWidget {
     return ResponsiveLayout(
       mobile: _MobileScaffold(
         title: title,
-        child: child,
         actions: actions,
         selectedIndex: selectedIndex,
         onDestinationSelected: (index) => context.go(_routeForIndex(index)),
         l10n: l10n,
+        child: child,
       ),
       tablet: _MobileScaffold(
         title: title,
-        child: child,
         actions: actions,
         selectedIndex: selectedIndex,
         onDestinationSelected: (index) => context.go(_routeForIndex(index)),
         l10n: l10n,
+        child: child,
       ),
       desktop: _DesktopScaffold(
         title: title,
-        child: child,
         actions: actions,
         selectedIndex: selectedIndex,
         onDestinationSelected: (index) => context.go(_routeForIndex(index)),
         l10n: l10n,
+        child: child,
       ),
     );
   }
@@ -76,10 +76,10 @@ class AppScaffold extends StatelessWidget {
 class _MobileScaffold extends StatelessWidget {
   const _MobileScaffold({
     required this.title,
-    required this.child,
     required this.selectedIndex,
     required this.onDestinationSelected,
     required this.l10n,
+    required this.child,
     this.actions,
   });
 
@@ -136,10 +136,10 @@ class _MobileScaffold extends StatelessWidget {
 class _DesktopScaffold extends StatelessWidget {
   const _DesktopScaffold({
     required this.title,
-    required this.child,
     required this.selectedIndex,
     required this.onDestinationSelected,
     required this.l10n,
+    required this.child,
     this.actions,
   });
 

@@ -228,7 +228,6 @@ class _ActionCard extends StatelessWidget {
     required this.description,
     required this.icon,
     required this.onPressed,
-    super.key,
   });
 
   final String title;
@@ -347,7 +346,6 @@ class _SidebarItem extends StatelessWidget {
     required this.icon,
     required this.label,
     required this.onPressed,
-    super.key,
   });
 
   final IconData icon;

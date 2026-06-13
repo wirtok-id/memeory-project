@@ -75,4 +75,30 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get light => 'Terang';
+
+  @override
+  String get loginTitle => 'Login';
+
+  @override
+  String get emailLabel => 'Email';
+
+  @override
+  String get passwordLabel => 'Kata Sandi';
+
+  @override
+  String get loginButton => 'Masuk';
+
+  @override
+  String get loadingText => 'Memuat...';
+
+  @override
+  String loginFailed(String error) {
+    return 'Login gagal: $error';
+  }
+
+  @override
+  String get localeIndonesian => 'Bahasa Indonesia';
+
+  @override
+  String get localeEnglish => 'Bahasa Inggris';
 }

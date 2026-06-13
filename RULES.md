@@ -314,3 +314,44 @@ A task is COMPLETE only if:
 - TASKS.md updated
 
 Otherwise task remains INCOMPLETE.
+---
+
+## Environment & System Modification Rules
+
+The development environment is considered PRE-CONFIGURED.
+
+Assume all required tools already exist unless explicitly instructed otherwise by the Owner.
+
+Never modify the local machine environment without explicit Owner approval.
+
+Forbidden actions:
+
+- Installing software
+- Installing SDKs
+- Installing Flutter
+- Installing Dart
+- Installing Android Studio
+- Installing Java
+- Installing Node.js
+- Installing npm packages globally
+- Installing Chocolatey packages
+- Installing Scoop packages
+- Installing Winget packages
+- Installing Homebrew packages
+- Modifying PATH
+- Modifying registry settings
+- Modifying shell profiles
+- Modifying system configuration
+- Updating existing tools
+- Upgrading dependencies outside task scope
+
+Examples of forbidden commands:
+
+```bash
+choco install *
+winget install *
+scoop install *
+brew install *
+npm install -g *
+dart pub global activate *
+flutter upgrade

@@ -406,7 +406,7 @@ dev_dependencies:
 
 | ID | Task | Type | Priority | Estimate | Owner |
 |---|---|---|---|---|---|
-| T-260 | Audit all text strings and ensure 100% ARB coverage | FE | 🔴 P0 | 4h | Flutter |
+| T-260 | Completed | Audit all text strings and ensure 100% ARB coverage |
 | T-261 | Native speaker review of all Indonesian translations | QA | 🔴 P0 | 3h | QA |
 | T-262 | Implement RTL layout support (future-proofing) | FE | 🟡 P2 | 2h | Flutter |
 
@@ -451,7 +451,7 @@ dev_dependencies:
 | T-295 | Set up Supabase Pro plan for production (connection pooling, backups) | OPS | 🟠 P1 | 1h | DevOps |
 | T-296 | Create runbook for common operational tasks | OPS | 🟡 P2 | 3h | DevOps |
 | T-297 | Conduct launch readiness review against PRD checklist | QA | 🔴 P0 | 2h | All |
-
+| T-298 | Completed | Redesign Web UI to Modern Minimalist Style |
 ---
 
 ## Summary

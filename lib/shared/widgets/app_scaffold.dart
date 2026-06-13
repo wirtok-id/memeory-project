@@ -3,6 +3,8 @@ import 'package:go_router/go_router.dart';
 
 import '../../core/router/app_routes.dart';
 import '../../l10n/app_localizations.dart';
+import 'layout/responsive_layout.dart';
+import 'layout/sidebar.dart';
 
 class AppScaffold extends StatelessWidget {
   const AppScaffold({
@@ -19,8 +21,77 @@ class AppScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final currentPath = GoRouterState.of(context).uri.path;
+    final selectedIndex = _selectedIndex(currentPath);
     final l10n = AppLocalizations.of(context);
 
+    return ResponsiveLayout(
+      mobile: _MobileScaffold(
+        title: title,
+        child: child,
+        actions: actions,
+        selectedIndex: selectedIndex,
+        onDestinationSelected: (index) => context.go(_routeForIndex(index)),
+        l10n: l10n,
+      ),
+      tablet: _MobileScaffold(
+        title: title,
+        child: child,
+        actions: actions,
+        selectedIndex: selectedIndex,
+        onDestinationSelected: (index) => context.go(_routeForIndex(index)),
+        l10n: l10n,
+      ),
+      desktop: _DesktopScaffold(
+        title: title,
+        child: child,
+        actions: actions,
+        selectedIndex: selectedIndex,
+        onDestinationSelected: (index) => context.go(_routeForIndex(index)),
+        l10n: l10n,
+      ),
+    );
+  }
+
+  static int _selectedIndex(String path) {
+    return switch (path) {
+      AppRoutes.search => 1,
+      AppRoutes.timeline => 2,
+      AppRoutes.trending => 3,
+      AppRoutes.profile || AppRoutes.settings => 4,
+      _ => 0,
+    };
+  }
+
+  static String _routeForIndex(int index) {
+    return switch (index) {
+      1 => AppRoutes.search,
+      2 => AppRoutes.timeline,
+      3 => AppRoutes.trending,
+      4 => AppRoutes.profile,
+      _ => AppRoutes.home,
+    };
+  }
+}
+
+class _MobileScaffold extends StatelessWidget {
+  const _MobileScaffold({
+    required this.title,
+    required this.child,
+    required this.selectedIndex,
+    required this.onDestinationSelected,
+    required this.l10n,
+    this.actions,
+  });
+
+  final String title;
+  final Widget child;
+  final int selectedIndex;
+  final ValueChanged<int> onDestinationSelected;
+  final AppLocalizations l10n;
+  final List<Widget>? actions;
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -28,8 +99,8 @@ class AppScaffold extends StatelessWidget {
       ),
       body: SafeArea(child: child),
       bottomNavigationBar: NavigationBar(
-        selectedIndex: _selectedIndex(currentPath),
-        onDestinationSelected: (index) => context.go(_routeForIndex(index)),
+        selectedIndex: selectedIndex,
+        onDestinationSelected: onDestinationSelected,
         destinations: [
           NavigationDestination(
             icon: const Icon(Icons.home_outlined),
@@ -60,24 +131,46 @@ class AppScaffold extends StatelessWidget {
       ),
     );
   }
+}
 
-  int _selectedIndex(String path) {
-    return switch (path) {
-      AppRoutes.search => 1,
-      AppRoutes.timeline => 2,
-      AppRoutes.trending => 3,
-      AppRoutes.profile || AppRoutes.settings => 4,
-      _ => 0,
-    };
-  }
+class _DesktopScaffold extends StatelessWidget {
+  const _DesktopScaffold({
+    required this.title,
+    required this.child,
+    required this.selectedIndex,
+    required this.onDestinationSelected,
+    required this.l10n,
+    this.actions,
+  });
 
-  String _routeForIndex(int index) {
-    return switch (index) {
-      1 => AppRoutes.search,
-      2 => AppRoutes.timeline,
-      3 => AppRoutes.trending,
-      4 => AppRoutes.profile,
-      _ => AppRoutes.home,
-    };
+  final String title;
+  final Widget child;
+  final int selectedIndex;
+  final ValueChanged<int> onDestinationSelected;
+  final AppLocalizations l10n;
+  final List<Widget>? actions;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: [
+          Sidebar(
+            selectedIndex: selectedIndex,
+            onDestinationSelected: onDestinationSelected,
+          ),
+          const VerticalDivider(width: 1, thickness: 1),
+          Expanded(
+            child: Scaffold(
+              appBar: AppBar(
+                title: Text(title),
+                actions: actions,
+              ),
+              body: SafeArea(child: child),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

@@ -20,5 +20,21 @@
   "language": "Bahasa",
   "system": "Sistem",
   "dark": "Gelap",
-  "light": "Terang"
+  "light": "Terang",
+  "loginTitle": "Login",
+  "emailLabel": "Email",
+  "passwordLabel": "Kata Sandi",
+  "loginButton": "Masuk",
+  "loadingText": "Memuat...",
+  "loginFailed": "Login gagal: {error}",
+  "@loginFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String",
+        "example": "Kredensial tidak valid"
+      }
+    }
+  },
+  "localeIndonesian": "Bahasa Indonesia",
+  "localeEnglish": "Bahasa Inggris"
 }

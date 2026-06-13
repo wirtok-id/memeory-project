@@ -18,48 +18,99 @@ class SettingsPage extends ConsumerWidget {
     return AppScaffold(
       title: l10n.settings,
       child: ListView(
-        padding: const EdgeInsets.all(AppSpacing.md),
+        padding: const EdgeInsets.all(AppSpacing.xl),
         children: [
-          Text(l10n.theme, style: Theme.of(context).textTheme.titleLarge),
+          _SectionHeader(label: l10n.theme.toUpperCase()),
           const SizedBox(height: AppSpacing.sm),
-          SegmentedButton<ThemeMode>(
-            segments: [
-              ButtonSegment(
+          _DropdownField<ThemeMode>(
+            value: preferences.themeMode,
+            items: [
+              DropdownMenuItem(
                 value: ThemeMode.system,
-                icon: const Icon(Icons.brightness_auto),
-                label: Text(l10n.system),
+                child: Text(l10n.system),
               ),
-              ButtonSegment(
+              DropdownMenuItem(
                 value: ThemeMode.dark,
-                icon: const Icon(Icons.dark_mode),
-                label: Text(l10n.dark),
+                child: Text(l10n.dark),
               ),
-              ButtonSegment(
+              DropdownMenuItem(
                 value: ThemeMode.light,
-                icon: const Icon(Icons.light_mode),
-                label: Text(l10n.light),
+                child: Text(l10n.light),
               ),
             ],
-            selected: {preferences.themeMode},
-            onSelectionChanged: (selection) {
-              controller.setThemeMode(selection.single);
+            onChanged: (value) {
+              if (value != null) controller.setThemeMode(value);
             },
           ),
-          const SizedBox(height: AppSpacing.lg),
-          Text(l10n.language, style: Theme.of(context).textTheme.titleLarge),
+          const SizedBox(height: AppSpacing.xl),
+          _SectionHeader(label: l10n.language.toUpperCase()),
           const SizedBox(height: AppSpacing.sm),
-          SegmentedButton<Locale>(
-            segments: const [
-              ButtonSegment(value: Locale('id'), label: Text('ID')),
-              ButtonSegment(value: Locale('en'), label: Text('EN')),
+          _DropdownField<Locale>(
+            value: preferences.locale,
+            items: [
+              DropdownMenuItem(
+                value: const Locale('id'),
+                child: Text(l10n.localeIndonesian),
+              ),
+              DropdownMenuItem(
+                value: const Locale('en'),
+                child: Text(l10n.localeEnglish),
+              ),
             ],
-            selected: {preferences.locale},
-            onSelectionChanged: (selection) {
-              controller.setLocale(selection.single);
+            onChanged: (value) {
+              if (value != null) controller.setLocale(value);
             },
           ),
         ],
       ),
+    );
+  }
+}
+
+class _SectionHeader extends StatelessWidget {
+  const _SectionHeader({required this.label});
+
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      label,
+      style: Theme.of(context).textTheme.labelSmall?.copyWith(
+        color: Theme.of(context).colorScheme.onSurfaceVariant,
+        letterSpacing: 0.5,
+      ),
+    );
+  }
+}
+
+class _DropdownField<T> extends StatelessWidget {
+  const _DropdownField({
+    required this.value,
+    required this.items,
+    required this.onChanged,
+  });
+
+  final T value;
+  final List<DropdownMenuItem<T>> items;
+  final void Function(T?) onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButtonFormField<T>(
+      initialValue: value,
+      items: items,
+      onChanged: onChanged,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+      ),
+      isExpanded: true,
+      style: Theme.of(context).textTheme.bodyLarge,
+      dropdownColor: Theme.of(context).colorScheme.surface,
+      borderRadius: BorderRadius.circular(12),
     );
   }
 }

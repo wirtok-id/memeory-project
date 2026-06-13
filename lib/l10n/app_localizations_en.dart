@@ -75,4 +75,30 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get light => 'Light';
+
+  @override
+  String get loginTitle => 'Login';
+
+  @override
+  String get emailLabel => 'Email';
+
+  @override
+  String get passwordLabel => 'Password';
+
+  @override
+  String get loginButton => 'Login';
+
+  @override
+  String get loadingText => 'Loading...';
+
+  @override
+  String loginFailed(String error) {
+    return 'Login failed: $error';
+  }
+
+  @override
+  String get localeIndonesian => 'Indonesian';
+
+  @override
+  String get localeEnglish => 'English';
 }

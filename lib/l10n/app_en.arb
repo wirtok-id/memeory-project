@@ -20,5 +20,21 @@
   "language": "Language",
   "system": "System",
   "dark": "Dark",
-  "light": "Light"
+  "light": "Light",
+  "loginTitle": "Login",
+  "emailLabel": "Email",
+  "passwordLabel": "Password",
+  "loginButton": "Login",
+  "loadingText": "Loading...",
+  "loginFailed": "Login failed: {error}",
+  "@loginFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String",
+        "example": "Invalid credentials"
+      }
+    }
+  },
+  "localeIndonesian": "Indonesian",
+  "localeEnglish": "English"
 }

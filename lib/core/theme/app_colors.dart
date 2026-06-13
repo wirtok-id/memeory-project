@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 class AppColors {
   const AppColors._();
 
-  static const electricPurple = Color(0xFF7C3AED);
-  static const vividPink = Color(0xFFEC4899);
-  static const cyan = Color(0xFF06B6D4);
+  static const primary = Color(0xFF7C3AED);
+  static const primaryContainer = Color(0xFFEDE9FE);
+  static const onPrimary = Color(0xFFFFFFFF);
+  static const onPrimaryContainer = Color(0xFF2E1065);
   static const darkBackground = Color(0xFF0F0F0F);
   static const darkSurface = Color(0xFF1A1A1A);
   static const lightBackground = Color(0xFFFAFAFA);

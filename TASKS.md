@@ -35,7 +35,7 @@
 | T-002 | Partial | Flutter app source and web scaffolding created manually. `flutter create` could not run because Flutter is not installed/on PATH. Android/iOS platform folders must be generated once Flutter is available. |
 | T-003 | Completed | Added strict `analysis_options.yaml`. |
 | T-004 | Completed | Added `pubspec.yaml` with Phase 1 dependencies, adapted to Riverpod per current requirement. |
-| T-005 | Not started | IDE settings can be added after preferred editor/project workspace is confirmed. |
+| T-005 | Partial Completed (VS Code Part Completed) | VS Code workspace settings & extensions created. Android Studio part moved to T-300 (depends on T-299). |
 | T-006 | Completed | Added `.env.example`; local placeholder `.env` exists and is gitignored. |
 | T-007 | Completed | Added `flutter_dotenv` bootstrap with guarded Supabase initialization. |
 | T-008 | Completed | Added `Makefile` for common Flutter and Supabase commands. |
@@ -452,6 +452,18 @@ dev_dependencies:
 | T-296 | Create runbook for common operational tasks | OPS | 🟡 P2 | 3h | DevOps |
 | T-297 | Conduct launch readiness review against PRD checklist | QA | 🔴 P0 | 2h | All |
 | T-298 | Completed | Redesign Web UI to Modern Minimalist Style |
+|       |           | ✅ UI redesign selesai (Modern Minimalist) |
+|       |           | ✅ Responsive layout (mobile/tablet/desktop) |
+|       |           | ✅ CI hijau (analyze + test pass) |
+|       |           | ✅ GitHub Pages deploy otomatis berhasil |
+| T-299 | Completed | Persiapan Android Studio untuk Workspace Configuration |
+|       |           | ✅ Android Studio terinstall (E:\Android_studio) |
+|       |           | ✅ Android SDK terinstall (E:\android) |
+|       |           | ✅ cmdline-tools, platform-tools, build-tools, emulator |
+|       |           | ✅ JDK 21 (JBR) terdeteksi |
+|       |           | ✅ Licenses accepted |
+|       |           | ✅ Flutter doctor Android toolchain: PASS |
+| T-300 | Not started | T-005 Part 2 — Android Studio Workspace Configuration |
 ---
 
 ## Summary

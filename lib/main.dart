@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'app.dart';
 import 'core/config/app_config.dart';
@@ -49,4 +50,17 @@ Future<void> main() async {
       ),
     ),
   );
+
+  // Listen to auth state changes
+  Supabase.instance.client.auth.onAuthStateChange.listen((data) {
+    final event = data.event;
+    final session = data.session;
+    if (event == AuthChangeEvent.signedIn) {
+      // User signed in
+    } else if (event == AuthChangeEvent.signedOut) {
+      // User signed out
+    } else if (event == AuthChangeEvent.tokenRefreshed) {
+      // Token refreshed
+    }
+  });
 }

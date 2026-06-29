@@ -212,8 +212,22 @@ dev_dependencies:
 
 | ID | Task | Type | Priority | Estimate | Owner |
 |---|---|---|---|---|---|
-| T-090 | Generate Dart model classes with freezed for all entities | FE | 🔴 P0 | 4h | Flutter |
-| T-091 | Implement `MemeRepository` with Supabase queries | FE | 🔴 P0 | 4h | Flutter |
+| T-090 | Completed | Generate Dart model classes with freezed for all entities |
+|       |           | ✅ 18 models generated with freezed + json_serializable |
+|       |           | ✅ Enums converted to Dart enums with @JsonEnum |
+|       |           | ✅ PaginatedResponse<T> generic pagination with genericArgumentFactories |
+|       |           | ✅ build_runner succeeds |
+|       |           | ✅ flutter analyze = 0 errors |
+|       |           | ✅ flutter test = 33/33 pass |
+| T-091 | Completed | Implement `MemeRepository` with Supabase queries |
+|       |           | ✅ MemeRepository interface (domain) + implementation (data) |
+|       |           | ✅ searchMemes with full-text search + filters |
+|       |           | ✅ getTrendingMemes, getTimelineMemes, getMemeById |
+|       |           | ✅ getMemesByCategory, getMemesByYear |
+|       |           | ✅ PaginatedResponse<T> with cursor-based pagination |
+|       |           | ✅ build_runner succeeds |
+|       |           | ✅ flutter analyze = 0 errors |
+|       |           | ✅ flutter test = 33/33 pass |
 | T-092 | Implement `BookmarkRepository` | FE | 🔴 P0 | 2h | Flutter |
 | T-093 | Implement `CategoryRepository` | FE | 🟠 P1 | 1h | Flutter |
 | T-094 | Implement local caching strategy with `hydrated_bloc` | FE | 🟠 P1 | 3h | Flutter |
@@ -463,7 +477,27 @@ dev_dependencies:
 |       |           | ✅ JDK 21 (JBR) terdeteksi |
 |       |           | ✅ Licenses accepted |
 |       |           | ✅ Flutter doctor Android toolchain: PASS |
-| T-300 | Not started | T-005 Part 2 — Android Studio Workspace Configuration |
+| T-300 | Completed | T-005 Part 2 — Android Studio Workspace Configuration |
+|       |           | ✅ .idea/codeStyles/Project.xml: Dart & Kotlin code style (line length 80, indent 2) |
+|       |           | ✅ .idea/inspectionProfiles/Project_Default.xml: Dart/Flutter inspections enabled |
+|       |           | ✅ .idea/workspace.xml: Format on save (reformat, optimize imports, cleanup) |
+|       |           | ✅ Konsisten dengan .vscode/settings.json & analysis_options.yaml |
+| T-301 | Completed | Fix Production Authentication & Environment Configuration |
+|       |           | ✅ Fixed CI/CD workflows: removed placeholder .env.example usage, switched to GitHub Secrets |
+|       |           | ✅ Fixed Supabase config: updated site_url to production URL in config.toml |
+|       |           | ✅ Added auth state listener in main.dart for session persistence |
+|       |           | ✅ Added auth callback route (/auth/callback) in app_router.dart with redirect logic |
+|       |           | ✅ Added debug logging to login flow for production debugging |
+|       |           | ✅ Build succeeds: flutter build web --release succeeds |
+|       |           | ✅ flutter analyze: 0 errors (only info/warnings) |
+|       |           | ✅ flutter test: 33/33 tests pass |
+|       |           | ✅ flutter build web --release: SUCCESS |
+|       |           | 📋 Production config still needed in Render/Supabase Dashboard (see below) |
+| T-302 | Not started | Audit Halaman yang Belum Terhubung ke Routing |
+|       |           | 🟠 P1 — Audit seluruh halaman dan routing |
+|       |           | Daftar existing routes, missing routes, orphan pages, navigation issues |
+|       |           | Fix route registration, navigation issues, dead routes |
+|       |           | flutter analyze lulus, test lulus |
 ---
 
 ## Summary

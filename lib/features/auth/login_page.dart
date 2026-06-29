@@ -24,16 +24,23 @@ class _LoginPageState extends State<LoginPage> {
         isLoading = true;
       });
 
-      await Supabase.instance.client.auth.signInWithPassword(
+      // Debug logging
+      debugPrint('[LoginPage] Attempting login with email: ${emailController.text.trim()}');
+      
+      final response = await Supabase.instance.client.auth.signInWithPassword(
         email: emailController.text.trim(),
         password: passwordController.text,
       );
 
       if (!mounted) return;
 
+      debugPrint('[LoginPage] Login response: user=${response.user?.id}, session=${response.session != null}');
+
       context.go('/');
     } catch (e) {
       if (!mounted) return;
+
+      debugPrint('[LoginPage] Login error: $e');
 
       final l10n = AppLocalizations.of(context);
       ScaffoldMessenger.of(context).showSnackBar(

@@ -23,7 +23,42 @@ jobs:
           cache: true
 
       - name: Create CI environment file
-        run: cp .env.example .env
+        run: |
+          cat > .env << 'EOF'
+          APP_NAME=${{ secrets.APP_NAME }}
+          APP_ENV=${{ secrets.APP_ENV }}
+          APP_VERSION=${{ secrets.APP_VERSION }}
+          SUPABASE_URL=${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }}
+          SUPABASE_PROJECT_REF=${{ secrets.SUPABASE_PROJECT_REF }}
+          SUPABASE_BUCKET_THUMBNAILS=${{ secrets.SUPABASE_BUCKET_THUMBNAILS }}
+          SUPABASE_BUCKET_MEDIA=${{ secrets.SUPABASE_BUCKET_MEDIA }}
+          SUPABASE_BUCKET_AVATARS=${{ secrets.SUPABASE_BUCKET_AVATARS }}
+          GROQ_MODEL_FAST=${{ secrets.GROQ_MODEL_FAST }}
+          GROQ_MODEL_BALANCED=${{ secrets.GROQ_MODEL_BALANCED }}
+          GROQ_MODEL_POWERFUL=${{ secrets.GROQ_MODEL_POWERFUL }}
+          GROQ_MODEL_GUARD=${{ secrets.GROQ_MODEL_GUARD }}
+          GOOGLE_CLIENT_ID_WEB=${{ secrets.GOOGLE_CLIENT_ID_WEB }}
+          GOOGLE_CLIENT_ID_ANDROID=${{ secrets.GOOGLE_CLIENT_ID_ANDROID }}
+          GOOGLE_CLIENT_ID_IOS=${{ secrets.GOOGLE_CLIENT_ID_IOS }}
+          SENTRY_DSN=${{ secrets.SENTRY_DSN }}
+          SENTRY_ENVIRONMENT=${{ secrets.SENTRY_ENVIRONMENT }}
+          SENTRY_TRACES_SAMPLE_RATE=${{ secrets.SENTRY_TRACES_SAMPLE_RATE }}
+          DEFAULT_LOCALE=${{ secrets.DEFAULT_LOCALE }}
+          SUPPORTED_LOCALES=${{ secrets.SUPPORTED_LOCALES }}
+          FEATURE_AI_EXPLANATIONS=${{ secrets.FEATURE_AI_EXPLANATIONS }}
+          FEATURE_VIRAL_PREDICTION=${{ secrets.FEATURE_VIRAL_PREDICTION }}
+          FEATURE_SIMILARITY_SEARCH=${{ secrets.FEATURE_SIMILARITY_SEARCH }}
+          FEATURE_TREND_REPORTS=${{ secrets.FEATURE_TREND_REPORTS }}
+          FEATURE_ANALYTICS=${{ secrets.FEATURE_ANALYTICS }}
+          FEATURE_MODERATION=${{ secrets.FEATURE_MODERATION }}
+          FEATURE_ADMIN_PANEL=${{ secrets.FEATURE_ADMIN_PANEL }}
+          MEMES_PER_PAGE=${{ secrets.MEMES_PER_PAGE }}
+          TRENDING_MEMES_COUNT=${{ secrets.TRENDING_MEMES_COUNT }}
+          TIMELINE_MEMES_PER_SECTION=${{ secrets.TIMELINE_MEMES_PER_SECTION }}
+          SIMILAR_MEMES_COUNT=${{ secrets.SIMILAR_MEMES_COUNT }}
+          TIMELINE_YEARS_BACK=${{ secrets.TIMELINE_YEARS_BACK }}
+          EOF
 
       - name: Install dependencies
         run: flutter pub get

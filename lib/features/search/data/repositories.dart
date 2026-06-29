@@ -1,0 +1,1 @@
+export 'package:memeory/features/search/data/repositories/meme_repository_impl.dart';

@@ -4,8 +4,8 @@
 > **Tagline:** Relive the Internet's Funniest Memories  
 > **Version:** 1.0.0  
 > **Status:** Active Development  
-> **Author:** Product Team  
-> **Last Updated:** 2025
+> **Author:** WIRR team  
+> **Last Updated:** 2026
 
 ---
 
@@ -29,7 +29,10 @@
 
 ## 1. Executive Summary
 
-Memeory is a cross-platform meme discovery and nostalgia application that allows users to explore, understand, and compare memes across time. By combining a curated meme archive with AI-powered explanations and viral trend analysis, Memeory creates a unique experience at the intersection of internet culture, nostalgia, and AI.
+Memeory is a cross-platform meme discovery and nostalgia application that allows users to explore,
+understand, and compare memes across time. By combining a curated meme archive with AI-powered
+explanations and viral trend analysis, Memeory creates a unique experience at the intersection of
+internet culture, nostalgia, and AI.
 
 **Primary Value Proposition:**  
 "See what was funny exactly 1, 2, or 3 years ago today — and understand why."
@@ -44,7 +47,9 @@ Memeory is a cross-platform meme discovery and nostalgia application that allows
 
 ### The Problem
 
-Internet users love memes, but the ephemeral nature of online culture means that most memes are forgotten within days or weeks. There is currently no centralized, curated, AI-enhanced platform that:
+Internet users love memes, but the ephemeral nature of online culture means that most memes are
+forgotten within days or weeks. There is currently no centralized, curated, AI-enhanced platform
+that:
 
 1. **Preserves** meme history in a searchable archive
 2. **Contextualizes** memes for users who missed the original cultural moment
@@ -57,17 +62,18 @@ Internet users love memes, but the ephemeral nature of online culture means that
 - "What does this meme mean?" is searched millions of times per month on Google
 - No existing app provides a time-based meme nostalgia experience
 - Indonesian internet users are among the highest meme consumers in Southeast Asia
-- Gen Z and Millennials (18–35) represent the core meme audience and actively seek nostalgic internet content
+- Gen Z and Millennials (18–35) represent the core meme audience and actively seek nostalgic
+  internet content
 
 ### Pain Points
 
-| Pain Point | Current Solution | Gap |
-|---|---|---|
-| "I don't understand this meme" | Google search | Fragmented, unreliable, no structure |
-| "What was trending last year?" | Reddit archives | Requires domain knowledge, hard to navigate |
-| "Find memes similar to this" | No good solution | Does not exist at scale |
-| "Is this meme going to go viral?" | Gut feel | No data-backed prediction tool |
-| "I want to feel nostalgic about old memes" | Random Reddit browsing | Unstructured, no time-based experience |
+| Pain Point                                 | Current Solution       | Gap                                         |
+|--------------------------------------------|------------------------|---------------------------------------------|
+| "I don't understand this meme"             | Google search          | Fragmented, unreliable, no structure        |
+| "What was trending last year?"             | Reddit archives        | Requires domain knowledge, hard to navigate |
+| "Find memes similar to this"               | No good solution       | Does not exist at scale                     |
+| "Is this meme going to go viral?"          | Gut feel               | No data-backed prediction tool              |
+| "I want to feel nostalgic about old memes" | Random Reddit browsing | Unstructured, no time-based experience      |
 
 ---
 
@@ -75,23 +81,23 @@ Internet users love memes, but the ephemeral nature of online culture means that
 
 ### Business Goals
 
-| Goal | Metric | Target (6 months) |
-|---|---|---|
-| User Acquisition | Registered users | 50,000 |
-| Engagement | DAU/MAU ratio | ≥ 25% |
-| Retention | 7-day retention | ≥ 40% |
-| Content | Indexed memes | 100,000+ |
-| Monetization readiness | Premium feature usage | 15% of users |
+| Goal                   | Metric                | Target (6 months) |
+|------------------------|-----------------------|-------------------|
+| User Acquisition       | Registered users      | 50,000            |
+| Engagement             | DAU/MAU ratio         | ≥ 25%             |
+| Retention              | 7-day retention       | ≥ 40%             |
+| Content                | Indexed memes         | 100,000+          |
+| Monetization readiness | Premium feature usage | 15% of users      |
 
 ### Product Goals
 
-| Goal | Metric | Target |
-|---|---|---|
-| Performance | App load time (P95) | < 2 seconds |
-| AI Quality | Explanation satisfaction rate | ≥ 80% thumbs up |
-| Search Quality | Search result relevance | ≥ 75% click-through |
-| Availability | Uptime | 99.5% |
-| Localization | EN + ID coverage | 100% of strings |
+| Goal           | Metric                        | Target              |
+|----------------|-------------------------------|---------------------|
+| Performance    | App load time (P95)           | < 2 seconds         |
+| AI Quality     | Explanation satisfaction rate | ≥ 80% thumbs up     |
+| Search Quality | Search result relevance       | ≥ 75% click-through |
+| Availability   | Uptime                        | 99.5%               |
+| Localization   | EN + ID coverage              | 100% of strings     |
 
 ### Key Performance Indicators (KPIs)
 
@@ -122,12 +128,12 @@ Internet users love memes, but the ephemeral nature of online culture means that
 
 ---
 
-## 5. User Personas
+## 5. User Personas (the User Personas is all fake made by ai)
 
-### Persona 1 — "Reza, The Nostalgic Scroller" (Primary)
+### Persona 1 — "Wira, The Infinity Scroller" (Primary)
 
-- **Age:** 22, University student in Surabaya
-- **Devices:** Android phone, occasional laptop
+- **Age:** 16, student in Waru, Surabaya
+- **Devices:** Android phone, Computer
 - **Behavior:** Scrolls memes daily, shares in WhatsApp groups, loves throwback content
 - **Goal:** Relive funny moments from the internet's past, understand memes his friends share
 - **Frustration:** Doesn't understand "boomer" or older memes; wants context
@@ -157,59 +163,59 @@ Internet users love memes, but the ephemeral nature of online culture means that
 
 ### Authentication
 
-| ID | As a... | I want to... | So that... | Priority |
-|---|---|---|---|---|
-| US-001 | New user | Sign up with Google | I can register quickly without a password | P0 |
-| US-002 | New user | Sign up with email/password | I can create an account without Google | P0 |
-| US-003 | Returning user | Log in with my credentials | I can access my saved bookmarks and preferences | P0 |
-| US-004 | Logged-in user | Log out securely | My account is protected | P1 |
-| US-005 | User | Change my language preference | The app displays in my preferred language | P1 |
+| ID     | As a...        | I want to...                  | So that...                                      | Priority |
+|--------|----------------|-------------------------------|-------------------------------------------------|----------|
+| US-001 | New user       | Sign up with Google           | I can register quickly without a password       | P0       |
+| US-002 | New user       | Sign up with email/password   | I can create an account without Google          | P0       |
+| US-003 | Returning user | Log in with my credentials    | I can access my saved bookmarks and preferences | P0       |
+| US-004 | Logged-in user | Log out securely              | My account is protected                         | P1       |
+| US-005 | User           | Change my language preference | The app displays in my preferred language       | P1       |
 
 ### Meme Discovery & Search
 
-| ID | As a... | I want to... | So that... | Priority |
-|---|---|---|---|---|
-| US-010 | User | Search memes by keyword | I can find specific memes quickly | P0 |
-| US-011 | User | Filter search by year | I can find memes from a specific time period | P0 |
-| US-012 | User | Filter search by category | I can browse memes within a topic I like | P1 |
-| US-013 | User | Filter search by tags | I can find closely related memes | P1 |
-| US-014 | User | See search suggestions as I type | I can find content faster | P2 |
-| US-015 | User | Browse trending searches | I can discover what others are looking for | P2 |
+| ID     | As a... | I want to...                     | So that...                                   | Priority |
+|--------|---------|----------------------------------|----------------------------------------------|----------|
+| US-010 | User    | Search memes by keyword          | I can find specific memes quickly            | P0       |
+| US-011 | User    | Filter search by year            | I can find memes from a specific time period | P0       |
+| US-012 | User    | Filter search by category        | I can browse memes within a topic I like     | P1       |
+| US-013 | User    | Filter search by tags            | I can find closely related memes             | P1       |
+| US-014 | User    | See search suggestions as I type | I can find content faster                    | P2       |
+| US-015 | User    | Browse trending searches         | I can discover what others are looking for   | P2       |
 
 ### Meme Timeline
 
-| ID | As a... | I want to... | So that... | Priority |
-|---|---|---|---|---|
-| US-020 | User | See what memes were trending 1 year ago today | I can feel nostalgic | P0 |
-| US-021 | User | See what memes were trending 2–3 years ago | I can explore deeper history | P0 |
-| US-022 | User | Browse a historical meme timeline | I can see the evolution of meme culture | P1 |
-| US-023 | User | Share a meme from the past | I can share nostalgia with friends | P1 |
+| ID     | As a... | I want to...                                  | So that...                              | Priority |
+|--------|---------|-----------------------------------------------|-----------------------------------------|----------|
+| US-020 | User    | See what memes were trending 1 year ago today | I can feel nostalgic                    | P0       |
+| US-021 | User    | See what memes were trending 2–3 years ago    | I can explore deeper history            | P0       |
+| US-022 | User    | Browse a historical meme timeline             | I can see the evolution of meme culture | P1       |
+| US-023 | User    | Share a meme from the past                    | I can share nostalgia with friends      | P1       |
 
 ### Trending Memes
 
-| ID | As a... | I want to... | So that... | Priority |
-|---|---|---|---|---|
-| US-030 | User | See currently trending memes | I can stay up to date with meme culture | P0 |
-| US-031 | User | Know the source of a trending meme | I can verify and explore further | P1 |
-| US-032 | User | Filter trending by platform (Reddit, TikTok, etc.) | I can see platform-specific trends | P2 |
+| ID     | As a... | I want to...                                       | So that...                              | Priority |
+|--------|---------|----------------------------------------------------|-----------------------------------------|----------|
+| US-030 | User    | See currently trending memes                       | I can stay up to date with meme culture | P0       |
+| US-031 | User    | Know the source of a trending meme                 | I can verify and explore further        | P1       |
+| US-032 | User    | Filter trending by platform (Reddit, TikTok, etc.) | I can see platform-specific trends      | P2       |
 
 ### AI Features
 
-| ID | As a... | I want to... | So that... | Priority |
-|---|---|---|---|---|
-| US-040 | User | Get an AI explanation of any meme | I can understand memes I don't recognize | P0 |
-| US-041 | User | Read the explanation in Bahasa Indonesia | I can understand in my native language | P0 |
-| US-042 | User | Find similar memes | I can explore related content | P1 |
-| US-043 | User | See a daily AI trend summary | I can catch up quickly | P1 |
-| US-044 | User | Check if a meme might go viral | I can make informed sharing decisions | P2 |
+| ID     | As a... | I want to...                             | So that...                               | Priority |
+|--------|---------|------------------------------------------|------------------------------------------|----------|
+| US-040 | User    | Get an AI explanation of any meme        | I can understand memes I don't recognize | P0       |
+| US-041 | User    | Read the explanation in Bahasa Indonesia | I can understand in my native language   | P0       |
+| US-042 | User    | Find similar memes                       | I can explore related content            | P1       |
+| US-043 | User    | See a daily AI trend summary             | I can catch up quickly                   | P1       |
+| US-044 | User    | Check if a meme might go viral           | I can make informed sharing decisions    | P2       |
 
 ### Bookmarks & Personal
 
-| ID | As a... | I want to... | So that... | Priority |
-|---|---|---|---|---|
-| US-050 | Logged-in user | Bookmark a meme | I can save it for later | P1 |
-| US-051 | Logged-in user | View all my bookmarked memes | I can access my personal collection | P1 |
-| US-052 | Logged-in user | Remove a bookmark | I can manage my collection | P1 |
+| ID     | As a...        | I want to...                 | So that...                          | Priority |
+|--------|----------------|------------------------------|-------------------------------------|----------|
+| US-050 | Logged-in user | Bookmark a meme              | I can save it for later             | P1       |
+| US-051 | Logged-in user | View all my bookmarked memes | I can access my personal collection | P1       |
+| US-052 | Logged-in user | Remove a bookmark            | I can manage my collection          | P1       |
 
 ---
 
@@ -220,6 +226,7 @@ Internet users love memes, but the ephemeral nature of online culture means that
 **Description:** Full-text and faceted search across the meme database.
 
 **Functional Requirements:**
+
 - FR-01.1: Search by title (partial match supported)
 - FR-01.2: Filter by year (single year or range)
 - FR-01.3: Filter by category (dropdown multi-select)
@@ -230,6 +237,7 @@ Internet users love memes, but the ephemeral nature of online culture means that
 - FR-01.8: Search response time < 500ms (P95)
 
 **Acceptance Criteria:**
+
 - Searching "Drake" returns all memes tagged with Drake meme template
 - Year filter "2022" returns only memes with `year = 2022`
 - Empty results state shown with helpful suggestion
@@ -242,6 +250,7 @@ Internet users love memes, but the ephemeral nature of online culture means that
 **Description:** Time-based browsing experience showing memes from exactly 1, 2, and 3 years ago.
 
 **Functional Requirements:**
+
 - FR-02.1: Display top 10 memes from exactly 1 year ago today
 - FR-02.2: Display top 10 memes from exactly 2 years ago today
 - FR-02.3: Display top 10 memes from exactly 3 years ago today
@@ -250,6 +259,7 @@ Internet users love memes, but the ephemeral nature of online culture means that
 - FR-02.6: Timeline refreshes daily at midnight local time
 
 **Acceptance Criteria:**
+
 - On June 6, 2025, "1 year ago" shows memes from June 5–7, 2024 (±1 day window)
 - Each timeline card shows: thumbnail, title, view count, source
 - Timeline section header shows "Today, 1 Year Ago — June 6, 2024"
@@ -261,6 +271,7 @@ Internet users love memes, but the ephemeral nature of online culture means that
 **Description:** Real-time and near-real-time trending meme feed updated every 6 hours.
 
 **Functional Requirements:**
+
 - FR-03.1: Display top 20 trending memes updated every 6 hours
 - FR-03.2: Show source badge (Reddit, TikTok, YouTube, Admin)
 - FR-03.3: Show trending rank and rank change (↑↓)
@@ -268,6 +279,7 @@ Internet users love memes, but the ephemeral nature of online culture means that
 - FR-03.5: Filter by source platform
 
 **Acceptance Criteria:**
+
 - Trending list updates within 6 hours of major trend changes
 - Source badge renders correct platform logo
 - New entries in trending list are highlighted with "NEW" badge
@@ -279,6 +291,7 @@ Internet users love memes, but the ephemeral nature of online culture means that
 **Description:** On-demand AI-powered explanation of any meme in the database.
 
 **Functional Requirements:**
+
 - FR-04.1: Trigger explanation from meme detail page
 - FR-04.2: Show loading state with skeleton UI (max 5 seconds)
 - FR-04.3: Display: Meaning, Origin, Cultural Context, Popularity Reasons
@@ -287,6 +300,7 @@ Internet users love memes, but the ephemeral nature of online culture means that
 - FR-04.6: Cache explanation (30 days) to avoid redundant API calls
 
 **Acceptance Criteria:**
+
 - Explanation generated within 5 seconds for 95% of requests
 - Cached explanations load instantly (< 100ms)
 - Language toggle switches content without page reload
@@ -299,12 +313,14 @@ Internet users love memes, but the ephemeral nature of online culture means that
 **Description:** AI-powered vector similarity search to find related memes.
 
 **Functional Requirements:**
+
 - FR-05.1: Show up to 8 similar memes on meme detail page
 - FR-05.2: Similarity based on: template, tags, category, text content
 - FR-05.3: Each similar meme shows: thumbnail, title, similarity badge
 - FR-05.4: Similarity search result cached for 24 hours
 
 **Acceptance Criteria:**
+
 - Similar memes are genuinely related (not random)
 - Results load within 1 second (using pre-computed vectors)
 - At least 4 results shown when sufficient similar memes exist
@@ -316,6 +332,7 @@ Internet users love memes, but the ephemeral nature of online culture means that
 **Description:** Daily AI-generated report summarizing the day's meme trends.
 
 **Functional Requirements:**
+
 - FR-06.1: Generate daily report at 00:00 UTC
 - FR-06.2: Report includes: top memes, top categories, emerging trends
 - FR-06.3: Natural language summary (EN + ID)
@@ -329,6 +346,7 @@ Internet users love memes, but the ephemeral nature of online culture means that
 **Description:** AI prediction of a meme's viral potential.
 
 **Functional Requirements:**
+
 - FR-07.1: Display viral score (0–100) with visual gauge
 - FR-07.2: Show prediction category: Low / Medium / High / Very High
 - FR-07.3: Show 2–3 sentence reasoning
@@ -342,6 +360,7 @@ Internet users love memes, but the ephemeral nature of online culture means that
 **Description:** User authentication via Supabase Auth.
 
 **Functional Requirements:**
+
 - FR-08.1: Google OAuth 2.0 sign-in
 - FR-08.2: Email + password registration and login
 - FR-08.3: Email verification for new email accounts
@@ -356,6 +375,7 @@ Internet users love memes, but the ephemeral nature of online culture means that
 **Description:** Save and manage favorite memes.
 
 **Functional Requirements:**
+
 - FR-09.1: Bookmark icon on every meme card
 - FR-09.2: Bookmarks persisted to database (available across devices)
 - FR-09.3: Dedicated Bookmarks screen in profile section
@@ -368,15 +388,15 @@ Internet users love memes, but the ephemeral nature of online culture means that
 
 ### Performance
 
-| Requirement | Target |
-|---|---|
-| App cold start (mobile) | < 3 seconds |
-| Screen navigation (warm) | < 200ms |
-| API response time (P50) | < 300ms |
-| API response time (P95) | < 1000ms |
-| AI explanation generation | < 5 seconds |
-| Search results | < 500ms |
-| Image loading (progressive) | < 1 second |
+| Requirement                 | Target      |
+|-----------------------------|-------------|
+| App cold start (mobile)     | < 3 seconds |
+| Screen navigation (warm)    | < 200ms     |
+| API response time (P50)     | < 300ms     |
+| API response time (P95)     | < 1000ms    |
+| AI explanation generation   | < 5 seconds |
+| Search results              | < 500ms     |
+| Image loading (progressive) | < 1 second  |
 
 ### Scalability
 
@@ -416,16 +436,16 @@ Internet users love memes, but the ephemeral nature of online culture means that
 
 - **Style:** Minimalist, modern, colorful
 - **Color Palette:**
-  - Primary accent: Electric Purple `#7C3AED`
-  - Secondary accent: Vivid Pink `#EC4899`
-  - Tertiary accent: Cyan `#06B6D4`
-  - Background (dark): `#0F0F0F`
-  - Background (light): `#FAFAFA`
-  - Surface (dark): `#1A1A1A`
-  - Surface (light): `#FFFFFF`
-  - Text primary (dark): `#F5F5F5`
-  - Text primary (light): `#111111`
-  - Gray scale: `#6B7280`, `#9CA3AF`, `#D1D5DB`
+    - Primary accent: Electric Purple `#7C3AED`
+    - Secondary accent: Vivid Pink `#EC4899`
+    - Tertiary accent: Cyan `#06B6D4`
+    - Background (dark): `#0F0F0F`
+    - Background (light): `#FAFAFA`
+    - Surface (dark): `#1A1A1A`
+    - Surface (light): `#FFFFFF`
+    - Text primary (dark): `#F5F5F5`
+    - Text primary (light): `#111111`
+    - Gray scale: `#6B7280`, `#9CA3AF`, `#D1D5DB`
 
 ### Theme
 
@@ -451,12 +471,12 @@ Internet users love memes, but the ephemeral nature of online culture means that
 
 ### Responsive Breakpoints
 
-| Breakpoint | Width | Layout |
-|---|---|---|
-| Mobile S | < 360px | Single column, compact |
-| Mobile M | 360–480px | Single column, standard |
-| Tablet | 481–1024px | Two-column grid |
-| Desktop | > 1024px | Three-column grid, sidebar |
+| Breakpoint | Width      | Layout                     |
+|------------|------------|----------------------------|
+| Mobile S   | < 360px    | Single column, compact     |
+| Mobile M   | 360–480px  | Single column, standard    |
+| Tablet     | 481–1024px | Two-column grid            |
+| Desktop    | > 1024px   | Three-column grid, sidebar |
 
 ---
 
@@ -477,17 +497,17 @@ Internet users love memes, but the ephemeral nature of online culture means that
 
 The following features are explicitly deferred to future versions:
 
-| Feature | Target Version | Notes |
-|---|---|---|
-| Meme Battle (voting) | v2 | Requires community features |
-| Community Uploads | v2 | Moderation pipeline needed |
-| Meme Museum (collections) | v2 | Curation effort required |
-| AI Meme Generator | v3 | Requires image generation model |
-| Meme Analytics Dashboard | v2 | Creator-facing feature |
-| Creator Profiles | v2 | Identity/verification system |
-| Push Notifications | v1.1 | Post-MVP |
-| Social Graph / Following | v2 | Community phase |
-| Comments / Reactions | v2 | Community phase |
+| Feature                   | Target Version | Notes                           |
+|---------------------------|----------------|---------------------------------|
+| Meme Battle (voting)      | v2             | Requires community features     |
+| Community Uploads         | v2             | Moderation pipeline needed      |
+| Meme Museum (collections) | v2             | Curation effort required        |
+| AI Meme Generator         | v3             | Requires image generation model |
+| Meme Analytics Dashboard  | v2             | Creator-facing feature          |
+| Creator Profiles          | v2             | Identity/verification system    |
+| Push Notifications        | v1.1           | Post-MVP                        |
+| Social Graph / Following  | v2             | Community phase                 |
+| Comments / Reactions      | v2             | Community phase                 |
 
 ---
 
@@ -495,23 +515,23 @@ The following features are explicitly deferred to future versions:
 
 ### External Dependencies
 
-| Dependency | Risk Level | Mitigation |
-|---|---|---|
-| Groq API availability | Medium | Fallback to cached explanations |
-| Reddit API (trending) | High | Rate limits; scraper fallback |
-| TikTok data access | High | No official API; use aggregator |
-| YouTube Data API v3 | Low | Well-documented, stable |
-| Supabase uptime | Low | 99.9% SLA on Pro tier |
+| Dependency            | Risk Level | Mitigation                      |
+|-----------------------|------------|---------------------------------|
+| Groq API availability | Medium     | Fallback to cached explanations |
+| Reddit API (trending) | High       | Rate limits; scraper fallback   |
+| TikTok data access    | High       | No official API; use aggregator |
+| YouTube Data API v3   | Low        | Well-documented, stable         |
+| Supabase uptime       | Low        | 99.9% SLA on Pro tier           |
 
 ### Technical Risks
 
-| Risk | Probability | Impact | Mitigation |
-|---|---|---|---|
-| Groq API rate limits hit | Medium | High | Aggressive caching, batch processing |
-| Meme copyright claims | Medium | High | DMCA process, admin moderation |
-| Content moderation gaps | Medium | High | Agent 006 + human review queue |
-| Flutter web performance | Low | Medium | Code splitting, lazy loading |
-| Database scaling at 10M+ records | Low | High | Proper indexing, partitioning strategy |
+| Risk                             | Probability | Impact | Mitigation                             |
+|----------------------------------|-------------|--------|----------------------------------------|
+| Groq API rate limits hit         | Medium      | High   | Aggressive caching, batch processing   |
+| Meme copyright claims            | Medium      | High   | DMCA process, admin moderation         |
+| Content moderation gaps          | Medium      | High   | Agent 006 + human review queue         |
+| Flutter web performance          | Low         | Medium | Code splitting, lazy loading           |
+| Database scaling at 10M+ records | Low         | High   | Proper indexing, partitioning strategy |
 
 ---
 

@@ -18,8 +18,8 @@ port = 54323
 
 [auth]
 enabled = true
-site_url = "http://localhost:3000"
-additional_redirect_urls = ["memeory://auth-callback"]
+site_url = "https://memeory-project.onrender.com"
+additional_redirect_urls = ["https://memeory-project.onrender.com/auth/callback", "memeory://auth-callback"]
 jwt_expiry = 3600
 enable_signup = true
 

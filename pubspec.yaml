@@ -50,7 +50,6 @@ flutter:
   uses-material-design: true
   generate: true
   assets:
-    - .env
     - assets/images/
     - assets/icons/
     - assets/animations/

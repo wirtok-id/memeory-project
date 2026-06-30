@@ -13,7 +13,8 @@ class AppConfig {
   });
 
   factory AppConfig.fromEnvironment() {
-    return AppConfig(
+    print('[AppConfig] Loading configuration from environment...');
+    final config = AppConfig(
       appName: _read('APP_NAME', fallback: 'Memeory'),
       environment: _read('APP_ENV', fallback: 'development'),
       version: _read('APP_VERSION', fallback: '1.0.0'),
@@ -26,6 +27,15 @@ class AppConfig {
           ) ??
           0,
     );
+    print('[AppConfig] Configuration loaded:');
+    print('[AppConfig]   appName: \$appName');
+    print('[AppConfig]   environment: \$environment');
+    print('[AppConfig]   version: \$version');
+    print('[AppConfig]   supabaseUrl: \$supabaseUrl');
+    print('[AppConfig]   supabaseAnonKey: \${supabaseAnonKey.isNotEmpty ? "SET (\${supabaseAnonKey.length} chars)" : "EMPTY"}');
+    print('[AppConfig]   defaultLocale: \$defaultLocale');
+    print('[AppConfig]   hasSupabaseCredentials: \${hasSupabaseCredentials}');
+    return config;
   }
 
   final String appName;
@@ -45,6 +55,10 @@ class AppConfig {
   }
 
   static String _read(String key, {String fallback = ''}) {
-    return dotenv.maybeGet(key) ?? fallback;
+    final value = dotenv.maybeGet(key) ?? fallback;
+    if (value == fallback && fallback.isNotEmpty) {
+      print('[AppConfig] Using fallback for \$key: \$value');
+    }
+    return value;
   }
 }

@@ -12,11 +12,25 @@ import 'core/preferences/app_preferences.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // Debug: Log environment loading
+  debugPrint('[Memeory] Loading environment variables...');
   await dotenv.load(fileName: '.env', isOptional: true);
+  debugPrint('[Memeory] Environment loaded');
 
   final config = AppConfig.fromEnvironment();
+  
+  // Debug: Log config values (without exposing secrets)
+  debugPrint('[Memeory] Config loaded:');
+  debugPrint('[Memeory]   supabaseUrl: ${config.supabaseUrl}');
+  debugPrint('[Memeory]   supabaseAnonKey: ${config.supabaseAnonKey.isNotEmpty ? "SET (${config.supabaseAnonKey.length} chars)" : "EMPTY"}');
+  debugPrint('[Memeory]   hasSupabaseCredentials: ${config.hasSupabaseCredentials}');
+  debugPrint('[Memeory]   environment: ${config.environment}');
+
   await SupabaseConfig.initialize(config);
+  debugPrint('[Memeory] Supabase initialized: ${SupabaseConfig.isInitialized}');
+  
   final preferences = await AppPreferences.load();
+  debugPrint('[Memeory] Preferences loaded');
 
   if (config.sentryDsn.isEmpty) {
     runApp(
@@ -56,11 +70,11 @@ Future<void> main() async {
     final event = data.event;
     final session = data.session;
     if (event == AuthChangeEvent.signedIn) {
-      // User signed in
+      debugPrint('[Memeory] Auth: User signed in');
     } else if (event == AuthChangeEvent.signedOut) {
-      // User signed out
+      debugPrint('[Memeory] Auth: User signed out');
     } else if (event == AuthChangeEvent.tokenRefreshed) {
-      // Token refreshed
+      debugPrint('[Memeory] Auth: Token refreshed');
     }
   });
 }

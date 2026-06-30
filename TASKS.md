@@ -487,13 +487,39 @@ dev_dependencies:
 |       |           | ✅ Fixed Supabase config: updated site_url to production URL in config.toml |
 |       |           | ✅ Added auth state listener in main.dart for session persistence |
 |       |           | ✅ Added auth callback route (/auth/callback) in app_router.dart with redirect logic |
-|       |           | ✅ Added debug logging to login flow for production debugging |
+|       |           | ✅ Removed .env from pubspec.yaml assets to prevent bundling dev credentials in production build |
 |       |           | ✅ Build succeeds: flutter build web --release succeeds |
 |       |           | ✅ flutter analyze: 0 errors (only info/warnings) |
 |       |           | ✅ flutter test: 33/33 tests pass |
 |       |           | ✅ flutter build web --release: SUCCESS |
 |       |           | 📋 Production config still needed in Render/Supabase Dashboard (see below) |
 | T-302 | Not started | Audit Halaman yang Belum Terhubung ke Routing |
+|       |           | 🟠 P1 — Audit seluruh halaman dan routing |
+|       |           | Daftar existing routes, missing routes, orphan pages, navigation issues |
+|       |           | Fix route registration, navigation issues, dead routes |
+|       |           | flutter analyze lulus, test lulus |
+|---|
+| **Production Configuration Checklist (Manual Setup Required)** |
+| **Render Dashboard → Environment Variables** |
+| | Variable | Value |
+| |---|---|
+| | `SUPABASE_URL` | `https://your-project.supabase.co` |
+| | `SUPABASE_ANON_KEY` | `your-anon-key` |
+| | `SUPABASE_PROJECT_REF` | `your-project-ref` |
+| | `APP_NAME` | `Memeory` |
+| | `APP_ENV` | `production` |
+| **Supabase Dashboard → Authentication → URL Configuration** |
+| | Setting | Value |
+| |---|---|
+| | Site URL | `https://memeory-project.onrender.com` |
+| | Redirect URLs | `https://memeory-project.onrender.com/auth/callback`, `memeory://auth-callback` |
+| **Supabase Dashboard → Authentication → Providers** |
+| | Setting | Value |
+| |---|---|
+| | Enable Google Provider | ✅ Enabled |
+| | Google Client ID | From Google Cloud Console |
+| | Google Client Secret | From Google Cloud Console |
+---
 |       |           | 🟠 P1 — Audit seluruh halaman dan routing |
 |       |           | Daftar existing routes, missing routes, orphan pages, navigation issues |
 |       |           | Fix route registration, navigation issues, dead routes |
